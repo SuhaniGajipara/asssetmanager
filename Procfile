@@ -1,1 +1,1 @@
-web: gunicorn coreinventory.wsgi:application
+web: cd backend && gunicorn coreinventory.wsgi:application
