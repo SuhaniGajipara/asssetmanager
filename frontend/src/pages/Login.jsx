@@ -33,7 +33,7 @@ function Login() {
                     <div>
                         <label className="block text-gray-400 text-[10px] font-black uppercase tracking-widest mb-2 ml-1">Email or Mobile Number</label>
                         <input 
-                            className="bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-3 transition-all outline-none"
+                            className="bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-xl focus:ring-primary focus:border-primary block w-full p-3 transition-all outline-none"
                             type="text" 
                             placeholder="your@email.com or +12345678"
                             value={username} onChange={e => setUsername(e.target.value)} required 
@@ -42,21 +42,21 @@ function Login() {
                     <div>
                         <label className="block text-gray-400 text-[10px] font-black uppercase tracking-widest mb-2 ml-1">Password</label>
                         <input 
-                            className="bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full p-3 transition-all outline-none"
+                            className="bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-xl focus:ring-primary focus:border-primary block w-full p-3 transition-all outline-none"
                             type="password" 
                             placeholder="••••••••"
                             value={password} onChange={e => setPassword(e.target.value)} required 
                         />
                     </div>
                     <div className="pt-2">
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white font-black py-4 px-4 rounded-2xl shadow-lg shadow-blue-200 focus:outline-none transition-all w-full flex items-center justify-center gap-2" type="submit">
+                        <button className="bg-primary hover:brightness-110 active:brightness-95 text-on-primary font-black py-4 px-4 rounded-2xl shadow-md hover:shadow-lg focus:outline-none transition-all w-full flex items-center justify-center gap-2" type="submit">
                             Sign In
                         </button>
                     </div>
                 </form>
                 <div className="mt-8 text-center">
                     <p className="text-sm text-gray-500 font-medium">
-                        Don't have an account? <button onClick={() => navigate('/register')} className="text-blue-600 font-black hover:underline">Create Account</button>
+                        Don't have an account? <button onClick={() => navigate('/register')} className="text-primary font-black hover:underline">Create Account</button>
                     </p>
                 </div>
             </div>

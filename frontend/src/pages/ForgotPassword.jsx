@@ -61,7 +61,7 @@ function ForgotPassword() {
                             </div>
                             <input
                                 type="email" required
-                                className="block w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none"
+                                className="block w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
                                 placeholder="name@company.com"
                                 value={email} onChange={(e) => setEmail(e.target.value)}
                             />
@@ -70,11 +70,14 @@ function ForgotPassword() {
 
                     <button
                         type="submit"
-                        disabled={loading || success}
-                        className="w-full flex justify-center items-center gap-2 py-4 px-4 border border-transparent text-sm font-black rounded-2xl text-white bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-200 transition-all disabled:opacity-50"
+                        disabled={loading}
+                        className="w-full flex justify-center items-center gap-2 py-4 px-4 border border-transparent text-sm font-black rounded-2xl text-on-primary bg-primary hover:brightness-110 active:brightness-95 shadow-xl shadow-primary/20 transition-all disabled:opacity-50"
                     >
-                        {loading ? 'Sending...' : 'Send Reset Code'}
-                        <Send size={18} />
+                        {loading ? 'Sending...' : (
+                            <>
+                                Send Reset Link <ArrowRight size={18} />
+                            </>
+                        )}
                     </button>
                 </form>
 

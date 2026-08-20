@@ -28,7 +28,7 @@ const Customers = () => {
 
   return (
     <div className="space-y-6 pb-12">
-      <PageHeader title="Customers" subtitle="Manage customer accounts and order history." action={<Button onClick={() => setIsModalOpen(true)} className="bg-primary hover:bg-primary/90 text-white flex items-center gap-2 px-4 py-2 rounded-md"><Plus size={18} /> Add Customer</Button>} />
+      <PageHeader title="Customers" subtitle="Manage customer accounts and order history." action={<Button variant="white" onClick={() => setIsModalOpen(true)} className="flex items-center gap-2 px-4 py-2"><Plus size={18} /> Add Customer</Button>} />
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card className="p-4 flex items-center gap-4 border-l-4 border-primary">
@@ -52,10 +52,10 @@ const Customers = () => {
       <Card className="flex flex-col">
         <div className="p-4 border-b border-outline-variant/50 bg-surface-dim"><SearchBox value={search} onChange={e => setSearch(e.target.value)} placeholder="Search customers..." /></div>
         
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse">
+        <div className="overflow-x-auto w-full">
+          <table className="w-full text-left border-collapse whitespace-nowrap">
             <thead>
-              <tr className="bg-primary-container border-b border-outline-variant/50 text-primary text-sm">
+              <tr className="bg-surface border-b border-outline-variant/50 text-on-surface-variant text-sm">
                 <th className="py-3 px-6 font-semibold">Customer Name</th>
                 <th className="py-3 px-6 font-semibold">Email</th>
                 <th className="py-3 px-6 font-semibold">Phone</th>
@@ -66,7 +66,7 @@ const Customers = () => {
             </thead>
             <tbody>
               {filtered.map((row, idx) => (
-                <tr key={idx} className="border-b border-outline-variant/30 hover:bg-surface-dim transition-colors group">
+                <tr key={idx} className="border-b border-outline-variant/30 hover:bg-outline-variant/10 transition-colors group">
                   <td className="px-6 py-4 font-semibold text-on-surface">{row.name}</td>
                   <td className="px-6 py-4 text-on-surface-variant">{row.email}</td>
                   <td className="px-6 py-4 text-on-surface-variant">{row.phone}</td>

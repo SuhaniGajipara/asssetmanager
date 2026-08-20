@@ -41,7 +41,7 @@ const SalesOrders = () => {
         title="Sales Orders" 
         subtitle="Manage customer orders and fulfillment workflows."
         action={
-          <Button onClick={() => setIsModalOpen(true)} className="bg-primary hover:bg-primary/90 text-white flex items-center gap-2 px-4 py-2 rounded-md">
+          <Button onClick={() => setIsModalOpen(true)} className="flex items-center gap-2 px-4 py-2">
             <Plus size={18} /> New Order
           </Button>
         }
@@ -79,10 +79,10 @@ const SalesOrders = () => {
           </select>
         </div>
         
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse">
+        <div className="overflow-x-auto w-full">
+          <table className="w-full text-left border-collapse whitespace-nowrap">
             <thead>
-              <tr className="bg-primary-container border-b border-outline-variant/50 text-primary text-sm">
+              <tr className="bg-surface border-b border-outline-variant/50 text-on-surface-variant text-sm">
                 <th className="py-3 px-6 font-semibold">Order ID</th>
                 <th className="py-3 px-6 font-semibold">Customer</th>
                 <th className="py-3 px-6 font-semibold">Date</th>
@@ -100,7 +100,7 @@ const SalesOrders = () => {
                 if (row.status === 'Delivered') statusColor = 'bg-primary-container text-secondary';
 
                 return (
-                  <tr key={idx} className="border-b border-outline-variant/30 hover:bg-surface-dim transition-colors group">
+                  <tr key={idx} className="border-b border-outline-variant/30 hover:bg-outline-variant/10 transition-colors group">
                     <td className="px-6 py-4 font-semibold text-on-surface">{row.id}</td>
                     <td className="px-6 py-4 text-on-surface">{row.customer}</td>
                     <td className="px-6 py-4 text-sm text-on-surface-variant">{row.date}</td>

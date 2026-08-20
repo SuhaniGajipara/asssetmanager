@@ -18,7 +18,7 @@ const EmptyState = ({
       {actionLabel && onAction && (
         <button 
           onClick={onAction}
-          className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-md font-medium transition-colors flex items-center gap-2"
+          className="bg-primary hover:brightness-110 active:brightness-95 text-on-primary px-6 py-2 rounded-md font-medium transition-all flex items-center gap-2"
         >
           <PlusCircle size={18} />
           {actionLabel}

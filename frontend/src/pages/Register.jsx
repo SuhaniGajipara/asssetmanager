@@ -63,7 +63,7 @@ function Register() {
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md w-full space-y-8 bg-surface p-10 rounded-3xl shadow-xl shadow-gray-200/50 border border-gray-100">
                 <div>
-                    <div className="mx-auto h-12 w-12 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-200">
+                    <div className="mx-auto h-12 w-12 bg-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
                         <CheckCircle2 className="text-white" size={24} />
                     </div>
                     <h2 className="mt-6 text-center text-3xl font-black text-gray-900 tracking-tight">Create Account</h2>
@@ -87,7 +87,7 @@ function Register() {
                                 </div>
                                 <input
                                     name="full_name" type="text" required
-                                    className="block w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none"
+                                    className="block w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
                                     placeholder="Enter Full Name"
                                     value={formData.full_name} onChange={handleChange}
                                 />
@@ -99,7 +99,7 @@ function Register() {
                                 <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1 mb-1 block">Username</label>
                                 <input
                                     name="username" type="text" required
-                                    className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none"
+                                    className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
                                     placeholder="Username"
                                     value={formData.username} onChange={handleChange}
                                 />
@@ -112,7 +112,7 @@ function Register() {
                                     </div>
                                     <input
                                         name="mobile_number" type="text" required
-                                        className="block w-full pl-9 pr-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none"
+                                        className="block w-full pl-9 pr-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
                                         placeholder="Mobile Number"
                                         value={formData.mobile_number} onChange={handleChange}
                                     />
@@ -128,7 +128,7 @@ function Register() {
                                 </div>
                                 <input
                                     name="email" type="email" required
-                                    className="block w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none"
+                                    className="block w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
                                     placeholder="Email Address"
                                     value={formData.email} onChange={handleChange}
                                 />
@@ -140,7 +140,7 @@ function Register() {
                                 <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1 mb-1 block">Password</label>
                                 <input
                                     name="password" type="password" required
-                                    className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none"
+                                    className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
                                     placeholder="Password"
                                     value={formData.password} onChange={handleChange}
                                 />
@@ -149,7 +149,7 @@ function Register() {
                                 <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1 mb-1 block">Confirm</label>
                                 <input
                                     name="confirm_password" type="password" required
-                                    className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none"
+                                    className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
                                     placeholder="Confirm Password"
                                     value={formData.confirm_password} onChange={handleChange}
                                 />
@@ -161,7 +161,7 @@ function Register() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="group relative w-full flex justify-center py-4 px-4 border border-transparent text-sm font-black rounded-2xl text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 shadow-xl shadow-blue-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="group relative w-full flex justify-center py-4 px-4 border border-transparent text-sm font-black rounded-2xl text-on-primary bg-primary hover:brightness-110 active:brightness-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-xl shadow-primary/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             {loading ? 'Creating Account...' : 'Sign up'}
                         </button>
@@ -171,7 +171,7 @@ function Register() {
                 <div className="text-center mt-6">
                     <p className="text-sm text-gray-500 font-medium">
                         Already have an account?{' '}
-                        <button onClick={() => navigate('/login')} className="text-blue-600 font-black hover:underline">
+                        <button onClick={() => navigate('/login')} className="text-primary font-black hover:underline">
                             Log in
                         </button>
                     </p>

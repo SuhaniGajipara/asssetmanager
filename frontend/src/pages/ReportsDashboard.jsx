@@ -25,7 +25,7 @@ const ReportsDashboard = () => {
 
   return (
     <div className="space-y-6 pb-12">
-      <PageHeader title="Reports & Analytics" subtitle="Generate and download business intelligence reports." action={<Button className="bg-primary hover:bg-primary/90 text-white flex items-center gap-2 px-4 py-2 rounded-md"><Plus size={18} /> New Report</Button>} />
+      <PageHeader title="Reports & Analytics" subtitle="Generate and download business intelligence reports." action={<Button variant="white" className="flex items-center gap-2 px-4 py-2"><Plus size={18} /> New Report</Button>} />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="p-4 flex items-center gap-4 border-l-4 border-secondary">
@@ -53,10 +53,10 @@ const ReportsDashboard = () => {
           </select>
         </div>
         
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse">
+        <div className="overflow-x-auto w-full">
+          <table className="w-full text-left border-collapse whitespace-nowrap">
             <thead>
-              <tr className="bg-primary-container border-b border-outline-variant/50 text-primary text-sm">
+              <tr className="bg-surface border-b border-outline-variant/50 text-on-surface-variant text-sm">
                 <th className="py-3 px-6 font-semibold">Report Name</th>
                 <th className="py-3 px-6 font-semibold">Category</th>
                 <th className="py-3 px-6 font-semibold">Date Generated</th>
@@ -66,7 +66,7 @@ const ReportsDashboard = () => {
             </thead>
             <tbody>
               {filtered.map((row, idx) => (
-                <tr key={idx} className="border-b border-outline-variant/30 hover:bg-surface-dim transition-colors group">
+                <tr key={idx} className="border-b border-outline-variant/30 hover:bg-outline-variant/10 transition-colors group">
                   <td className="px-6 py-4 font-semibold text-on-surface flex items-center gap-3">
                      <FileText size={18} className="text-outline"/> {row.name}
                   </td>

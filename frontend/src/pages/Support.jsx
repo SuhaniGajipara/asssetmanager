@@ -15,7 +15,7 @@ const Support = () => {
         title="Support" 
         subtitle="Get help and contact the support team."
         action={
-          <Button className="bg-primary hover:bg-primary/90 text-white flex items-center gap-2 px-4 py-2 rounded-md transition-colors">
+          <Button className="flex items-center gap-2 px-4 py-2 transition-colors">
             <Plus size={18} />
             Add New
           </Button>
@@ -30,10 +30,10 @@ const Support = () => {
         </div>
         
         {columns.length > 0 ? (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
+          <div className="overflow-x-auto w-full">
+            <table className="w-full text-left border-collapse whitespace-nowrap">
               <thead>
-                <tr className="bg-primary-container border-b border-outline-variant/50 text-primary text-sm">
+                <tr className="bg-surface border-b border-outline-variant/50 text-on-surface-variant text-sm">
                   {columns.map((col, i) => (
                     <th key={i} className="py-3 px-6 font-semibold">{col}</th>
                   ))}

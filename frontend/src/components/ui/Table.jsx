@@ -4,7 +4,7 @@ const Table = ({ columns = [], data = [], renderRow }) => {
   return (
     <div className="overflow-x-auto w-full">
       <table className="w-full text-left border-collapse">
-        <thead className="bg-surface-container-low border-b border-outline-variant sticky top-0 z-10">
+        <thead className="bg-surface border-b border-outline-variant/50 sticky top-0 z-10">
           <tr>
             {columns.map((col, idx) => (
               <th 
@@ -19,9 +19,9 @@ const Table = ({ columns = [], data = [], renderRow }) => {
         <tbody className="divide-y divide-outline-variant bg-surface-container-lowest">
           {data.length > 0 ? (
             data.map((item, rowIndex) => renderRow ? renderRow(item, rowIndex) : (
-              <tr key={rowIndex} className="hover:bg-surface-variant transition-colors">
+              <tr key={rowIndex} className="hover:bg-outline-variant/10 transition-colors">
                 {columns.map((col, colIndex) => (
-                  <td key={colIndex} className="px-6 py-4 text-body-md text-on-surface">
+                  <td key={colIndex} className="px-6 py-4 text-body-md tabular-nums text-on-surface">
                     {item[col.toLowerCase()] || '-'}
                   </td>
                 ))}

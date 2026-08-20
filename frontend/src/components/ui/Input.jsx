@@ -20,12 +20,13 @@ const Input = React.forwardRef(({
         id={generatedId}
         ref={ref}
         className={`
-          flex h-11 w-full rounded border border-outline-variant bg-surface-dim px-3 py-2 text-body-md text-on-surface
+          flex h-11 w-full rounded border border-[#D9D6E8] bg-surface px-3 py-2 text-body-md text-on-surface
           file:border-0 file:bg-transparent file:text-sm file:font-medium
           placeholder:text-outline
-          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary
+          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary
+          transition-colors duration-200
           disabled:cursor-not-allowed disabled:opacity-50
-          ${error ? 'border-error focus-visible:ring-error focus-visible:border-error' : ''}
+          ${error ? 'border-error focus-visible:ring-error/20 focus-visible:border-error' : 'hover:border-[#C4BFE0]'}
         `}
         {...props}
       />
