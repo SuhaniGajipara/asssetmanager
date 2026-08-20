@@ -23,10 +23,11 @@ const Select = React.forwardRef(({
           id={generatedId}
           ref={ref}
           className={`
-            flex h-11 w-full appearance-none rounded border border-outline-variant bg-surface-container-lowest px-3 py-2 pr-10 text-body-md text-on-surface
-            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary
+            flex h-11 w-full appearance-none rounded border border-[#D9D6E8] bg-surface px-3 py-2 pr-10 text-body-md text-on-surface
+            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary
+            transition-colors duration-200
             disabled:cursor-not-allowed disabled:opacity-50
-            ${error ? 'border-error focus-visible:ring-error focus-visible:border-error' : ''}
+            ${error ? 'border-error focus-visible:ring-error/20 focus-visible:border-error' : 'hover:border-[#C4BFE0]'}
           `}
           {...props}
         >

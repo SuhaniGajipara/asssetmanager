@@ -23,7 +23,7 @@ const Ledger = () => {
 
   return (
     <div className="space-y-6 pb-12">
-      <PageHeader title="General Ledger & Reports" subtitle="Financial tracking and transaction history." action={<Button className="bg-primary hover:bg-primary/90 text-white flex items-center gap-2 px-4 py-2 rounded-md">Generate Report</Button>} />
+      <PageHeader title="General Ledger & Reports" subtitle="Financial tracking and transaction history." action={<Button variant="white" className="flex items-center gap-2 px-4 py-2">Generate Report</Button>} />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="p-4 flex items-center gap-4 border-l-4 border-secondary">
@@ -52,9 +52,9 @@ const Ledger = () => {
           </div>
           
           <div className="overflow-x-auto h-full">
-            <table className="w-full text-left border-collapse">
+            <table className="w-full text-left border-collapse whitespace-nowrap">
               <thead>
-                <tr className="bg-primary-container border-b border-outline-variant/50 text-primary text-sm">
+                <tr className="bg-surface border-b border-outline-variant/50 text-on-surface-variant text-sm">
                   <th className="py-3 px-6 font-semibold">Transaction ID</th>
                   <th className="py-3 px-6 font-semibold">Date</th>
                   <th className="py-3 px-6 font-semibold">Description</th>
@@ -64,7 +64,7 @@ const Ledger = () => {
               </thead>
               <tbody>
                 {filtered.map((row, idx) => (
-                  <tr key={idx} className="border-b border-outline-variant/30 hover:bg-surface-dim transition-colors">
+                  <tr key={idx} className="border-b border-outline-variant/30 hover:bg-outline-variant/10 transition-colors">
                     <td className="px-6 py-4 font-semibold text-on-surface">{row.id}</td>
                     <td className="px-6 py-4 text-sm text-on-surface-variant">{row.date}</td>
                     <td className="px-6 py-4 text-on-surface">{row.description}</td>

@@ -28,7 +28,7 @@ export default {
         'primary-container': 'var(--color-primary-container)',
         'on-primary-container': 'var(--color-on-primary-container)',
         'inverse-primary': 'var(--color-inverse-primary)',
-        secondary: 'var(--color-secondary)', // Used for Success
+        secondary: 'var(--color-secondary)',
         'on-secondary': 'var(--color-on-secondary)',
         'secondary-container': 'var(--color-secondary-container)',
         'on-secondary-container': 'var(--color-on-secondary-container)',
@@ -63,10 +63,14 @@ export default {
         'tertiary-fixed-dim': 'var(--color-tertiary-fixed-dim)',
         'on-tertiary-fixed': 'var(--color-on-tertiary-fixed)',
         'on-tertiary-fixed-variant': 'var(--color-on-tertiary-fixed-variant)',
+        success: 'var(--color-success)',
+        'on-success': 'var(--color-on-success)',
+        'success-container': 'var(--color-success-container)',
+        'on-success-container': 'var(--color-on-success-container)',
       },
       fontFamily: {
-        sans: ['Literata', 'serif'],
-        serif: ['Literata', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Inter', 'sans-serif'],
         mono: ['Inter', 'monospace'],
       },
       borderRadius: {
@@ -86,7 +90,7 @@ export default {
       },
       boxShadow: {
         'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
-        'level-2': '0px 4px 12px rgba(0, 0, 0, 0.05)',
+        'level-2': '0px 4px 12px rgba(0, 0, 0, 0.08)',
       },
       keyframes: {
         'slide-up': {

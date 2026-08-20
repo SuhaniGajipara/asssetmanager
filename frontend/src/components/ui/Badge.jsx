@@ -7,16 +7,16 @@ const Badge = ({ status }) => {
       case 'ACTIVE':
       case 'DELIVERED':
       case 'COMPLETED':
-        return 'bg-primary-container text-on-primary-container font-medium';
+        return 'bg-success/10 text-success font-medium';
       case 'LOW STOCK':
-        return 'bg-tertiary-container text-on-tertiary-container font-medium';
+        return 'bg-warning/10 text-warning font-medium';
       case 'OUT OF STOCK':
       case 'CANCELLED':
       case 'ERROR':
-        return 'bg-error-container text-on-error-container font-medium';
+        return 'bg-error/10 text-error font-medium';
       case 'PENDING':
       default:
-        return 'bg-surface-variant text-on-surface-variant font-medium';
+        return 'bg-info/10 text-info font-medium';
     }
   };
 

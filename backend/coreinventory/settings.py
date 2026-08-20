@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'apps.warehouse',
     'apps.operations',
     'apps.ledger',
+    'apps.dashboard',
 ]
 
 MIDDLEWARE = [

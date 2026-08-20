@@ -48,7 +48,7 @@ function ResetPassword() {
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4">
             <div className="max-w-md w-full space-y-8 bg-surface p-10 rounded-3xl shadow-xl shadow-gray-200/50 border border-gray-100">
                 <div className="text-center">
-                    <div className="mx-auto h-12 w-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-4">
+                    <div className="mx-auto h-12 w-12 bg-primary-container rounded-2xl flex items-center justify-center text-primary mb-4">
                         <ShieldCheck size={24} />
                     </div>
                     <h2 className="text-3xl font-black text-gray-900 tracking-tight">Set New Password</h2>
@@ -67,7 +67,7 @@ function ResetPassword() {
                         <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1 mb-1 block">Verification Code</label>
                         <input
                             name="otp" type="text" required
-                            className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none"
+                            className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
                             placeholder="6-digit code"
                             value={formData.otp} onChange={handleChange}
                         />
@@ -77,7 +77,7 @@ function ResetPassword() {
                         <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1 mb-1 block">New Password</label>
                         <input
                             name="new_password" type="password" required
-                            className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none"
+                            className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
                             placeholder="••••••••"
                             value={formData.new_password} onChange={handleChange}
                         />
@@ -87,7 +87,7 @@ function ResetPassword() {
                         <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-1 mb-1 block">Confirm Password</label>
                         <input
                             name="confirm_password" type="password" required
-                            className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all outline-none"
+                            className="block w-full px-4 py-3.5 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
                             placeholder="••••••••"
                             value={formData.confirm_password} onChange={handleChange}
                         />
@@ -97,9 +97,9 @@ function ResetPassword() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full flex justify-center items-center gap-2 py-4 px-4 border border-transparent text-sm font-black rounded-2xl text-white bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-200 transition-all disabled:opacity-50"
+                            className="w-full flex justify-center items-center gap-2 py-4 px-4 border border-transparent text-sm font-black rounded-2xl text-on-primary bg-primary hover:brightness-110 active:brightness-95 shadow-xl shadow-primary/20 transition-all disabled:opacity-50"
                         >
-                            {loading ? 'Updating...' : 'Reset Password'}
+                            {loading ? 'Resetting Password...' : 'Reset Password'}
                             <ArrowRight size={18} />
                         </button>
                     </div>

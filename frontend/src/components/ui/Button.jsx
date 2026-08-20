@@ -10,14 +10,15 @@ const Button = ({
   type = 'button',
   ...props
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:bg-opacity-80 active:brightness-95';
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed';
   
   const variants = {
-    primary: 'bg-primary text-on-primary hover:bg-primary/90',
-    secondary: 'bg-surface-container-lowest border border-secondary text-secondary hover:bg-secondary-container',
-    outline: 'border border-outline bg-transparent text-primary hover:bg-surface-container',
-    ghost: 'bg-transparent text-primary hover:bg-surface-container',
-    danger: 'bg-error text-on-error hover:bg-error/90',
+    primary: 'bg-primary text-on-primary shadow-sm hover:shadow-md hover:brightness-110 active:brightness-95 border-0',
+    secondary: 'bg-secondary-container text-on-secondary-container shadow-sm hover:shadow-md hover:brightness-110 active:brightness-95 border-0',
+    outline: 'border border-outline bg-transparent text-primary hover:bg-surface-variant active:brightness-95',
+    ghost: 'bg-transparent text-primary hover:bg-surface-variant active:brightness-95',
+    danger: 'bg-error text-on-error shadow-sm hover:shadow-md hover:brightness-110 active:brightness-95 border-0',
+    white: 'bg-white text-[#2a1b54] shadow-sm hover:bg-gray-50 active:bg-gray-100 border border-gray-100',
   };
 
   const sizes = {

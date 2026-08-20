@@ -26,7 +26,7 @@ const Settings = () => {
                 <button 
                   key={tab} 
                   onClick={() => setActiveTab(tab)}
-                  className={`text-left px-4 py-3 text-sm font-medium transition-colors ${activeTab === tab ? 'bg-primary-container text-primary border-l-4 border-primary' : 'text-on-surface-variant hover:bg-surface-dim border-l-4 border-transparent'}`}
+                  className={`text-left px-4 py-3 text-sm font-medium transition-colors ${activeTab === tab ? 'bg-primary-container text-primary border-l-4 border-primary' : 'text-on-surface-variant hover:bg-outline-variant/10 border-l-4 border-transparent'}`}
                 >
                   {tab}
                 </button>

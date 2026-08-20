@@ -106,7 +106,7 @@ function VerifyOTP() {
                                 key={index}
                                 type="text"
                                 maxLength="1"
-                                className="w-12 h-14 bg-gray-50 border border-gray-200 text-gray-900 text-xl font-black rounded-xl text-center outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
+                                className="w-12 h-14 bg-gray-50 border border-gray-200 text-gray-900 text-xl font-black rounded-xl text-center outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                 value={data}
                                 onChange={(e) => handleChange(e.target, index)}
                                 onFocus={(e) => e.target.select()}
@@ -122,11 +122,12 @@ function VerifyOTP() {
                     </div>
 
                     <button
+                        type="submit"
+                        disabled={loading || otp.join('').length !== 6}
                         onClick={handleSubmit}
-                        disabled={loading || timer === 0}
-                        className="w-full flex justify-center items-center gap-2 py-4 px-4 border border-transparent text-sm font-black rounded-2xl text-white bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-200 transition-all disabled:opacity-50"
+                        className="w-full flex justify-center items-center gap-2 py-4 px-4 border border-transparent text-sm font-black rounded-2xl text-on-primary bg-primary hover:brightness-110 active:brightness-95 shadow-xl shadow-primary/20 transition-all disabled:opacity-50"
                     >
-                        {loading ? 'Verifying...' : 'Verify Account'}
+                        {loading ? 'Verifying...' : 'Verify Email'}
                         <ArrowRight size={18} />
                     </button>
 
@@ -135,7 +136,7 @@ function VerifyOTP() {
                         <button 
                             onClick={handleResend}
                             disabled={resendLoading}
-                            className="text-blue-600 font-black text-sm flex items-center gap-1 hover:underline disabled:opacity-50"
+                            className="text-primary font-black text-sm flex items-center gap-1 hover:underline disabled:opacity-50"
                         >
                             <RefreshCw size={14} className={resendLoading ? 'animate-spin' : ''} />
                             {resendLoading ? 'Sending...' : 'Resend Code'}
